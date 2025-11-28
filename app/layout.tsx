@@ -8,8 +8,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: Ajuda Alimentar Vaquinha Online | Vakinha,
-  description: Sua doação leva comida e esperança para quem mais precisa.,
+  title: "Ajude Ana - Vaquinha Online | Vakinha",
+  description: "Ajude Ana a se aproximar da cura. Sua doação faz diferença. Vaquinha online segura e confiável.",
   keywords: "vaquinha, crowdfunding, doação, solidariedade",
   generator: "v0.app",
   icons: {
