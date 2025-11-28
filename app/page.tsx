@@ -13,10 +13,10 @@ export default function Home() {
   const totalDonated = 300
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="w-full min-h-screen bg-white flex flex-col overflow-x-hidden">
       <Header />
 
-      <main className="max-w-4xl mx-auto px-4 py-8 flex-1">
+      <main className="w-full max-w-full sm:max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-1">
         {/* Image Carousel */}
         <ImageCarousel />
 

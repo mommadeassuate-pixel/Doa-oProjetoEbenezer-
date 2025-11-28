@@ -34,8 +34,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: "#ffffff",
 }
 
@@ -46,10 +46,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`font-sans antialiased`}>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+        />
+      </head>
+      <body className={`font-sans antialiased overflow-x-hidden`}>
         {children}
         <Analytics />
         <style>{`
+          html, body {
+            width: 100vw;
+            max-width: 100vw;
+            overflow-x: hidden;
+          }
           div[data-v0-powered-by] {
             display: none !important;
           }
