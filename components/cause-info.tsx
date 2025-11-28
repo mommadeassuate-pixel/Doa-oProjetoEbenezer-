@@ -8,8 +8,8 @@ interface CauseInfoProps {
 
 export default function CauseInfo({ totalDonated }: CauseInfoProps) {
   const goal = 2000
-  const progress = (totalDonated / goal) * 100
-  const donorsCount = 47
+  const progress = 46
+  const donorsCount = 38
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -88,7 +88,7 @@ export default function CauseInfo({ totalDonated }: CauseInfoProps) {
         <div className="flex items-center justify-between mb-3">
           <div>
             <p className="text-sm text-gray-600 font-medium">Arrecadado</p>
-            <p className="text-2xl font-bold text-green-600">{formatCurrency(totalDonated)}</p>
+            <p className="text-2xl font-bold text-green-600">R$ 925,00</p>
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600 font-medium">Meta</p>
@@ -106,7 +106,7 @@ export default function CauseInfo({ totalDonated }: CauseInfoProps) {
 
         {/* Progress Text */}
         <p className="text-sm text-gray-600 mt-3">
-          <span className="font-semibold text-gray-900">{Math.round(progress)}%</span> da meta atingida com{" "}
+          <span className="font-semibold text-gray-900">{progress}%</span> da meta atingida com{" "}
           <span className="font-semibold text-gray-900">{donorsCount}</span> doadores
         </p>
       </div>
@@ -120,7 +120,7 @@ export default function CauseInfo({ totalDonated }: CauseInfoProps) {
         </div>
         <div className="bg-green-50 rounded-lg p-4 text-center">
           <Target className="w-6 h-6 text-green-600 mx-auto mb-2" />
-          <p className="text-2xl font-bold text-gray-900">{Math.round(progress)}%</p>
+          <p className="text-2xl font-bold text-gray-900">{progress}%</p>
           <p className="text-xs text-gray-600">Meta</p>
         </div>
         <div className="bg-purple-50 rounded-lg p-4 text-center">
